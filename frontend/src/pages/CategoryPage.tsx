@@ -110,7 +110,9 @@ function CategoryPage() {
         try {
            snapshot = await getDocs(q);
         } catch (e) {
-           console.warn('createdAt sort failed, using date');
+           console.warn('createdAt sort failed, using date', e);
+           // Fallback to default sorting (or just simple collection query if index issue)
+           // If permission denied, this will also fail, handled in outer catch
            q = query(
             collection(db, category),
             orderBy('date', 'desc'),
@@ -121,6 +123,7 @@ function CategoryPage() {
 
         if (snapshot.empty) {
             setHasMore(false);
+            setDocuments([]); // Explicitly set empty
         } else {
             const result = processSnapshot(snapshot);
             if (result) {
@@ -130,9 +133,22 @@ function CategoryPage() {
             }
         }
 
-      } catch (err) {
+      } catch (err: any) {
         console.error('Error fetching docs:', err);
-        setNotFound(true);
+        // Only trigger not found if it's strictly not a permission error or potentially transient error
+        // If permission denied (e.g. not logged in), show empty state or handle differently, but here we prevent 404
+        if (err.code === 'permission-denied') {
+             // Handle permission denied: potentially empty list or redirect
+             setDocuments([]); 
+             setHasMore(false);
+             // Optionally set error state to show "Permission Denied" message instead of 404
+        } else {
+             // For other errors, we might still want to show content if possible, or error state
+             // But defaulting to NotFound (404) is too aggressive for data fetch errors
+             // setNotFound(true); // REMOVED: Do not redirect to 404 on fetch error
+             setDocuments([]);
+             setHasMore(false);
+        }
       } finally {
         setLoading(false);
       }
