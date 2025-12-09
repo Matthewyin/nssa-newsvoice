@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Business collection - requires authentication to read
+    match /business/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if false;
+    }
+
+    // Technology collection - requires authentication to read
+    match /technology/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if false;
+    }
+
+    // Sports collection - requires authentication to read
+    match /sports/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if false;
+    }
+
+    // Security collection - requires authentication to read
+    match /security/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if false;
+    }
+  }
+}

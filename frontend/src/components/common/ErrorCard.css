@@ -1,0 +1,162 @@
+/* ErrorCard Component Styles */
+
+.error-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.error-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Icon */
+.error-card__icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--spacing-lg);
+  transition: transform var(--transition-base);
+}
+
+.error-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Type-specific icon colors */
+.error-card--error .error-card__icon {
+  color: var(--color-error);
+}
+
+.error-card--warning .error-card__icon {
+  color: var(--color-warning);
+}
+
+.error-card--info .error-card__icon {
+  color: var(--color-info);
+}
+
+.error-card--permission .error-card__icon {
+  color: var(--color-text-secondary);
+}
+
+/* Title */
+.error-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Message */
+.error-card__message {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Details */
+.error-card__details {
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+  text-align: left;
+}
+
+.error-card__details summary {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.error-card__details summary::-webkit-details-marker {
+  display: none;
+}
+
+.error-card__details summary::after {
+  content: '▼';
+  font-size: var(--font-size-xs);
+  transition: transform var(--transition-fast);
+}
+
+.error-card__details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.error-card__details summary:hover {
+  background-color: var(--color-surface-alt);
+}
+
+.error-card__details summary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.error-card__details-content {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--color-surface-alt);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Actions */
+.error-card__actions {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Hover effect */
+.error-card:hover .error-card__icon {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .error-card {
+    min-height: 250px;
+  }
+
+  .error-card__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .error-card__title {
+    font-size: var(--font-size-lg);
+  }
+
+  .error-card__message {
+    font-size: var(--font-size-sm);
+  }
+
+  .error-card__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .error-card__actions button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "news-briefing-system",
+  "version": "1.0.0",
+  "description": "Automated news briefing system with AI processing",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "build": "cd frontend && npm run build",
+    "test": "cd frontend && npm test",
+    "lint": "cd frontend && npm run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
+    "deploy": "firebase deploy --only hosting"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "firebase": "^12.6.0",
+    "firebase-admin": "^12.7.0"
+  }
+}

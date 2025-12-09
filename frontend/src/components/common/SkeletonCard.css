@@ -1,0 +1,50 @@
+/* SkeletonCard Component Styles */
+
+.skeleton-card {
+  pointer-events: none;
+}
+
+.skeleton-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.skeleton-card__badges {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.skeleton-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.skeleton-card__audio {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--color-surface-alt);
+  border-radius: var(--radius-md);
+}
+
+.skeleton-card__meta {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.skeleton-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skeleton-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}

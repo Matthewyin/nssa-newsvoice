@@ -1,0 +1,62 @@
+/* Card Component Styles */
+
+.card {
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  background-color: var(--color-surface);
+}
+
+/* Variants */
+.card--default {
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.card--elevated {
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+.card--outlined {
+  box-shadow: none;
+  border: 2px solid var(--color-border);
+}
+
+/* Padding */
+.card--padding-sm {
+  padding: var(--spacing-sm);
+}
+
+.card--padding-md {
+  padding: var(--spacing-md);
+}
+
+.card--padding-lg {
+  padding: var(--spacing-lg);
+}
+
+/* Hoverable */
+.card--hoverable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card--default.card--hoverable:hover {
+  border-color: var(--color-primary);
+}
+
+/* Clickable */
+.card--clickable {
+  cursor: pointer;
+}
+
+.card--clickable:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .card--padding-lg {
+    padding: var(--spacing-md);
+  }
+}

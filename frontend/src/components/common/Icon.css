@@ -1,0 +1,23 @@
+/**
+ * Icon Component Styles
+ * Additional styles for Material Symbols icons
+ */
+
+.material-symbols-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* Ensure icons align properly in flex containers */
+.material-symbols-outlined:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+/* Icon button styles */
+button .material-symbols-outlined,
+a .material-symbols-outlined {
+  pointer-events: none;
+}

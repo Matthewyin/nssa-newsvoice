@@ -1,0 +1,97 @@
+/* Skeleton Component Styles */
+
+.skeleton {
+  background-color: var(--color-divider);
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Variants */
+.skeleton--text {
+  border-radius: var(--radius-sm);
+  height: 1em;
+  margin-bottom: 0.5em;
+  transform-origin: 0 60%;
+  transform: scale(1, 0.6);
+}
+
+.skeleton--rectangular {
+  border-radius: var(--radius-md);
+}
+
+.skeleton--rounded {
+  border-radius: var(--radius-lg);
+}
+
+.skeleton--circular {
+  border-radius: var(--radius-full);
+}
+
+/* Default dimensions */
+.skeleton--text:not([style*="width"]) {
+  width: 100%;
+}
+
+.skeleton--rectangular:not([style*="width"]) {
+  width: 100%;
+}
+
+.skeleton--rectangular:not([style*="height"]) {
+  height: 100px;
+}
+
+.skeleton--circular:not([style*="width"]):not([style*="height"]) {
+  width: 40px;
+  height: 40px;
+}
+
+.skeleton--rounded:not([style*="width"]) {
+  width: 100%;
+}
+
+.skeleton--rounded:not([style*="height"]) {
+  height: 200px;
+}
+
+/* Animations */
+.skeleton--animation-pulse {
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton--animation-wave::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  animation: skeleton-wave 1.5s linear infinite;
+}
+
+@keyframes skeleton-pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes skeleton-wave {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
