@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Article Detail - News Voice</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+                'apple': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                'floater': '0 8px 32px rgba(0, 0, 0, 0.12)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        
+        /* Hide scrollbar for clean horizontal scroll */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#1c1c1e] dark:text-white font-display antialiased selection:bg-primary/20">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-32">
+<!-- TopAppBar (Sticky & Translucent) -->
+<div class="sticky top-0 z-40 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 p-4 justify-between transition-all duration-200">
+<div class="flex shrink-0 items-center">
+<button class="group flex items-center gap-1 text-primary active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+<span class="text-[17px] font-medium leading-none">Feed</span>
+</button>
+</div>
+<div class="flex items-center justify-end gap-5">
+<button class="flex items-center justify-center text-primary active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-[24px]">bookmark_border</span>
+</button>
+<button class="flex items-center justify-center text-primary active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-[24px]">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="w-full max-w-2xl mx-auto animate-fade-in">
+<!-- HeadlineText -->
+<div class="px-5 pt-6 pb-4">
+<h1 class="text-[#1c1c1e] dark:text-white tracking-tight text-[32px] font-bold leading-[1.15] text-left">
+                    Global Markets Shift as Tech Giants Announce New AI Regulations
+                </h1>
+</div>
+<!-- ProfileHeader (Modified for sleek byline) -->
+<div class="px-5 pb-6">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-10 w-10 shadow-sm border border-gray-100 dark:border-gray-700 shrink-0" data-alt="Bloomberg media logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBR2GjwZdqVg40Vbq7PdTk7wvsC1F6rxae0lTcknozw9zgvey83CiJpCHWwO-9QCpHWINXyk7dKoOObKocBcS0f8KkH6xMt10mgx7tIDJ48oqrHYD5_IwLcHJo5aGeMucIuxEJEx-11hiqwQTeDBjORHWsKAxVokghiBpzM2jNJp-uyK9F0MstZkE_WJr4-s6EyiQ6wnJNfnELUS7r9aX7RJ0Desb6PA56LWjGkmw5EtspIhP5CVBQWRkm66UgSvO7tmXV2qwiohDY");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#1c1c1e] dark:text-gray-100 text-[15px] font-bold leading-tight">Bloomberg</p>
+<p class="text-[#8e8e93] text-[13px] font-medium leading-tight mt-0.5">
+                            By Sarah Jenkins • <span class="text-[#636366]">Today, 2 hrs ago</span>
+</p>
+</div>
+</div>
+</div>
+<!-- HeaderImage -->
+<div class="w-full px-5 mb-8">
+<div class="w-full bg-center bg-no-repeat bg-cover rounded-xl aspect-[16/9] shadow-apple overflow-hidden relative group" data-alt="Abstract visualization of digital networks connecting globally" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPojfstIhFJU2moT5yXgiskN-9iY56oW4OouBUFkOeEIygaJWXYB2xGE76gZH0sFvm54M_OoFNsShDKF_FofwcONGkT3WvYz7FVP8Fh3S72187E_VbmHONnNbajEMMPTAO9f7nbPTRMMtS609xEsolLBzl07NbgakJiEqPLBQEWuwSv6uD3murR6Gnui1BI_0sxiZsnW87l81L9ysXPVt1nYXcT_R3SngYPMAxamxdM4bNXg7LxDNyyMLigQlpUvUrANf77Y-EBAU");'>
+<!-- Gradient Overlay for depth -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-60"></div>
+</div>
+<p class="mt-2 text-[12px] text-[#8e8e93] px-1 font-medium">Fig 1. Visualization of cross-border data flows in 2024.</p>
+</div>
+<!-- BodyText -->
+<div class="px-5">
+<article class="text-[#1c1c1e] dark:text-gray-200 text-[18px] font-normal leading-[1.6] space-y-6">
+<p>
+                        The global technology sector is bracing for a significant transformation as major economies unite to enforce stricter artificial intelligence regulations. This move comes after months of intense deliberation regarding data privacy, copyright infringement, and ethical AI usage in both public and private sectors.
+                    </p>
+<p>
+                        Speaking from Brussels, key policymakers emphasized that the goal isn't to stifle innovation but to create a sustainable framework for growth. "We are building the guardrails for the next digital industrial revolution," noted one official.
+                    </p>
+<!-- Pull Quote Component -->
+<div class="my-8 relative pl-5 border-l-[3px] border-primary">
+<blockquote class="text-[20px] font-semibold italic text-[#1c1c1e] dark:text-white leading-snug">
+                            "Transparency is no longer optional. It is the currency of trust in the AI era."
+                        </blockquote>
+</div>
+<p>
+                        Market analysts predict short-term volatility as companies adjust their R&amp;D pipelines to meet compliance standards. However, long-term projections suggest that clear regulatory environments could actually accelerate enterprise adoption by reducing liability risks.
+                    </p>
+<h2 class="text-[22px] font-bold text-[#1c1c1e] dark:text-white mt-8 mb-2">Impact on Silicon Valley</h2>
+<p>
+                        Tech giants have responded with cautious optimism. While the administrative burden will undoubtedly increase, the harmonization of rules across the EU and North America simplifies what was previously a fragmented legal landscape.
+                    </p>
+</article>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-gray-200 dark:bg-gray-800 my-10"></div>
+<!-- Related Articles -->
+<div class="px-5 mb-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-[20px] font-bold text-[#1c1c1e] dark:text-white">Keep Reading</h3>
+<button class="text-primary text-sm font-semibold">View all</button>
+</div>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-4 -mx-5 px-5">
+<!-- Related Card 1 -->
+<div class="min-w-[220px] w-[220px] group cursor-pointer">
+<div class="aspect-[3/2] rounded-lg bg-gray-100 mb-3 bg-cover bg-center overflow-hidden" data-alt="Stock market graph showing upward trend" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-gODioz-iscQjS8Plok54XxLbsvjpqTTVdWMYjnbd_B7DkL-r6IKOb9LWUHSnjI1UeVwM03sRe7Y8a3JtqC-vuWXeQBvuGd0MxRirCh3dmmweH5oNqDy5yf0lz4ENQywsfnQkFtRKZ3GJCULdLlZAf98eB59ACn8znV_aj6hy2XQWiPd6tSmlQNlM5btxX7zXAY-dCtGCDQcbOEs4XyJD8VVRHYTZ3tj9VUhvjyKzenUb-lzgBdA7AqCJ5BtYT46v2IMgbTPhudI");'>
+<div class="w-full h-full bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+</div>
+<span class="text-[11px] font-bold tracking-wider text-primary uppercase mb-1 block">Markets</span>
+<h4 class="text-[15px] font-semibold leading-snug text-[#1c1c1e] dark:text-gray-100 group-hover:text-primary transition-colors">
+                            Tech Stocks Rally Despite New Tax Laws
+                        </h4>
+</div>
+<!-- Related Card 2 -->
+<div class="min-w-[220px] w-[220px] group cursor-pointer">
+<div class="aspect-[3/2] rounded-lg bg-gray-100 mb-3 bg-cover bg-center overflow-hidden" data-alt="Abstract neural network nodes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_SaCTerNNcIn-X09aT0cTToQtWmhBkWtH2i_1nwzvgfbo-H_CdJTqg6QzHINmT6AFMC7WBf3JPIVy_2cAm93mdSdfL0xqRBCArGNUqajHuPIfurRSW7ge_ris37IjNhmFD4Cm6lRAqEqKrhDFVZB-bHfeIpE7LyEpcWL7prNUi9HshBJUNCEb7LR4CQCdIFjUXF18MY250Uztgbl8Sg1xGKrMrpkl4DyBsRx6UADRLZxzlI-7wzzhNMouisEcx7yp9t-SmqFqxqU");'>
+<div class="w-full h-full bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+</div>
+<span class="text-[11px] font-bold tracking-wider text-primary uppercase mb-1 block">Analysis</span>
+<h4 class="text-[15px] font-semibold leading-snug text-[#1c1c1e] dark:text-gray-100 group-hover:text-primary transition-colors">
+                            The Deep Learning Curve: What's Next?
+                        </h4>
+</div>
+<!-- Related Card 3 -->
+<div class="min-w-[220px] w-[220px] group cursor-pointer">
+<div class="aspect-[3/2] rounded-lg bg-gray-100 mb-3 bg-cover bg-center overflow-hidden" data-alt="Modern office building glass facade" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPU9abIa2-Qc3W1PFZY7YR2-cygXW828yivyz_AF2z49SdFxoSJeaT05VLlHTrb-3OP5ep7rG_4aWVrzAqG6If12PHOKj3PkcaJn-iSyvzqS-5Z2Nbk2ZV9aU_ZEQNah764dUnkuhVNF0kaXqBIgg28QIV-OLNo2HE1oKDNP1O_ojl1e_AnW-FEAYABW9PTpr7DW-h_m1eI__JpgxENwdq2Tc473UF9TuSWvrHvr7cQiZMUXa9ekjXl323K97fhPRLYy8cQr4IktE");'>
+<div class="w-full h-full bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+</div>
+<span class="text-[11px] font-bold tracking-wider text-primary uppercase mb-1 block">Business</span>
+<h4 class="text-[15px] font-semibold leading-snug text-[#1c1c1e] dark:text-gray-100 group-hover:text-primary transition-colors">
+                            Remote Work Policies Shift in 2024
+                        </h4>
+</div>
+</div>
+</div>
+</main>
+<!-- Audio Player (Sticky Bottom) -->
+<div class="fixed bottom-0 left-0 right-0 z-50 p-4">
+<div class="max-w-2xl mx-auto w-full bg-[#FAFAFA]/90 dark:bg-[#1C1C1E]/90 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-floater rounded-[20px] p-3 pr-5 flex items-center gap-3 ring-1 ring-black/5">
+<!-- Play Button -->
+<button class="shrink-0 size-12 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/25 active:scale-95 transition-transform hover:bg-primary/90">
+<span class="material-symbols-outlined filled" style="font-size: 28px;">play_arrow</span>
+</button>
+<!-- Info Container -->
+<div class="flex flex-col grow justify-center overflow-hidden">
+<div class="flex justify-between items-center w-full mb-0.5">
+<span class="text-[11px] font-bold uppercase tracking-wider text-primary">Briefing</span>
+<span class="text-[11px] font-medium text-gray-400">4:12</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[14px] font-semibold text-[#1c1c1e] dark:text-white truncate">Listen to summary</span>
+<!-- Animated Waveform Visual -->
+<div aria-hidden="true" class="flex items-center gap-[2px] h-3 ml-1">
+<div class="w-[3px] bg-primary/40 h-[40%] rounded-full"></div>
+<div class="w-[3px] bg-primary/60 h-[70%] rounded-full"></div>
+<div class="w-[3px] bg-primary h-[100%] rounded-full animate-pulse"></div>
+<div class="w-[3px] bg-primary h-[60%] rounded-full"></div>
+<div class="w-[3px] bg-primary/40 h-[30%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- More Options -->
+<button class="shrink-0 size-8 flex items-center justify-center rounded-full text-gray-400 hover:bg-gray-200/50 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Home Indicator Spacer Safe Area -->
+<div class="h-2 w-full"></div>
+</div>
+</div>
+</body></html>

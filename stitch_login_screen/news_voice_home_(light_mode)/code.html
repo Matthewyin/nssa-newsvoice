@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>News Voice Home</title>
+<!-- Material Symbols Link -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+                },
+                fontFamily: {
+                "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+<style>
+        /* Custom font import for Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Hide scrollbar for clean mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+<!-- Main Mobile Container -->
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-background-light dark:bg-background-dark pb-24 group/design-root">
+<!-- Status Bar Area (Visual Spacer) -->
+<div class="h-12 w-full bg-transparent"></div>
+<!-- MetaText: Date -->
+<div class="px-5 pt-2">
+<p class="text-[#617589] dark:text-gray-400 text-xs font-semibold tracking-wider uppercase leading-normal">Friday, October 27</p>
+</div>
+<!-- HeadlineText: Greeting -->
+<div class="px-5 pb-6 pt-1">
+<h1 class="text-[#111418] dark:text-white tracking-tight text-[34px] font-bold leading-tight text-left">Good Morning, <br/><span class="text-primary">user01</span></h1>
+</div>
+<!-- Hero Card: Daily Briefing -->
+<div class="px-5 mb-8">
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-[#1a2633] shadow-[0_2px_12px_rgba(0,0,0,0.06)] dark:shadow-none transition-all hover:shadow-lg">
+<!-- Image Section -->
+<div class="relative h-48 w-full bg-cover bg-center" data-alt="Abstract digital network connections with blue lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvfyx2vIR5CLnco9pawWeLmMhGGimFz9G-o81y1rpcfQh-1HaPikzVdOtSviCdEXmx9eSgTM1YgejiJyT5HWSLDpKyOgj7MP1_8tQpFTQVy5ZGs7J8MFNbRrvPdqnpQkGUrqOrlGQv10_uPqGKY4fTaSOIw0CuY6ggDK6RLrFFCw_gQfqB3vcIkCay-X0BbYJbx5i6MU9HSQRLV2JOyQJq6lZVFlcHYYlUl0Gp6XdtdeRuuz-82CS1loWK07lFSp4KMFtfFaw6q-o");'>
+<!-- Overlay for text readability on image if needed, or play button centering -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-start p-4">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/90 text-white backdrop-blur-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+</span>
+<span class="text-white text-xs font-medium px-2 py-1 rounded-md bg-black/30 backdrop-blur-md">12 min listen</span>
+</div>
+</div>
+</div>
+<!-- Content Section -->
+<div class="p-5 flex flex-col gap-3">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-tight">Your Daily Intelligence</h2>
+</div>
+<p class="text-[#617589] dark:text-gray-400 text-[15px] font-normal leading-relaxed line-clamp-2">
+                            Today's briefing covers the latest market shifts, global security updates, and tech innovations.
+                        </p>
+</div>
+<button class="mt-2 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl h-11 bg-primary/10 dark:bg-primary/20 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<span class="text-primary font-semibold text-sm">Play Briefing</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TitleText: Categories -->
+<div class="px-5 pb-4 flex items-center justify-between">
+<h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-tight">Explore Categories</h2>
+<a class="text-primary text-sm font-medium hover:opacity-80" href="#">See All</a>
+</div>
+<!-- TextGrid: Categories -->
+<div class="px-5">
+<div class="grid grid-cols-2 gap-3">
+<!-- Business -->
+<div class="flex flex-col gap-3 rounded-2xl bg-white dark:bg-[#1a2633] p-4 shadow-sm border border-transparent dark:border-white/5 active:scale-95 transition-transform cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">work</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Business</h2>
+</div>
+<!-- Technology -->
+<div class="flex flex-col gap-3 rounded-2xl bg-white dark:bg-[#1a2633] p-4 shadow-sm border border-transparent dark:border-white/5 active:scale-95 transition-transform cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+<span class="material-symbols-outlined text-[24px]">memory</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Technology</h2>
+</div>
+<!-- Sports -->
+<div class="flex flex-col gap-3 rounded-2xl bg-white dark:bg-[#1a2633] p-4 shadow-sm border border-transparent dark:border-white/5 active:scale-95 transition-transform cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-orange-50 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined text-[24px]">emoji_events</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Sports</h2>
+</div>
+<!-- Security -->
+<div class="flex flex-col gap-3 rounded-2xl bg-white dark:bg-[#1a2633] p-4 shadow-sm border border-transparent dark:border-white/5 active:scale-95 transition-transform cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Security</h2>
+</div>
+</div>
+</div>
+<!-- Spacing for bottom nav -->
+<div class="h-6 w-full"></div>
+<!-- Bottom Navigation Bar (Apple Style Glassmorphism) -->
+<div class="fixed bottom-0 left-0 right-0 z-50">
+<div class="max-w-md mx-auto">
+<div class="bg-white/90 dark:bg-[#101922]/90 backdrop-blur-md border-t border-gray-200 dark:border-white/10 pb-6 pt-2 px-6 flex justify-between items-end">
+<button class="flex flex-col items-center gap-1 text-primary w-12">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#9ca3af] dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors w-12">
+<span class="material-symbols-outlined text-[26px]">search</span>
+<span class="text-[10px] font-medium">Search</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#9ca3af] dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors w-12">
+<span class="material-symbols-outlined text-[26px]">bookmark</span>
+<span class="text-[10px] font-medium">Saved</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#9ca3af] dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors w-12">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

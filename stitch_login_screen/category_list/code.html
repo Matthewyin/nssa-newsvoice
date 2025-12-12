@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>News Voice - Business Feed</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922", 
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera to maintain mobile feel */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary/30">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden max-w-[420px] mx-auto border-x border-slate-200 dark:border-slate-800 shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- Top Navigation (Glassmorphism) -->
+<nav class="sticky top-0 z-50 flex items-center justify-between px-4 pt-12 pb-3 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-white/5 transition-all duration-300">
+<button class="flex items-center justify-center w-10 h-10 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 active:scale-95 transition-transform text-primary">
+<span class="material-symbols-outlined font-semibold">arrow_back_ios_new</span>
+</button>
+<button class="flex items-center justify-center w-10 h-10 -mr-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 active:scale-95 transition-transform text-primary">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</nav>
+<!-- Scrollable Content -->
+<main class="flex-1 overflow-y-auto no-scrollbar pb-28">
+<!-- Large Header Area -->
+<header class="px-5 pt-4 pb-6">
+<p class="text-primary font-bold text-xs tracking-wide uppercase mb-2">News Voice</p>
+<h1 class="text-3xl font-extrabold tracking-tight leading-[1.1] mb-2 dark:text-white text-slate-900">
+                    Business Feed
+                </h1>
+<p class="text-slate-500 dark:text-slate-400 text-base font-medium leading-relaxed">
+                    Your daily intelligence briefing.
+                </p>
+</header>
+<!-- Search Bar -->
+<div class="px-5 pb-6">
+<div class="relative group">
+<span class="absolute inset-y-0 left-3 flex items-center text-slate-400">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</span>
+<input class="w-full bg-slate-200 dark:bg-white/5 border-none rounded-xl py-2.5 pl-10 pr-4 text-sm font-medium placeholder:text-slate-500 focus:ring-1 focus:ring-primary/50 transition-all outline-none text-slate-900 dark:text-white" placeholder="Search articles..." type="text"/>
+</div>
+</div>
+<!-- Content List -->
+<div class="flex flex-col gap-6">
+<!-- Section: Today -->
+<section>
+<div class="sticky top-[69px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-5 py-2 border-b border-slate-200 dark:border-white/5">
+<h4 class="text-slate-500 dark:text-slate-400 text-[11px] font-bold tracking-widest uppercase">
+                            Today, October 24
+                        </h4>
+</div>
+<div class="px-4 mt-3 flex flex-col gap-3">
+<!-- Card 1 -->
+<article class="bg-white dark:bg-[#1A222C] p-3 rounded-2xl active:scale-[0.98] transition-transform duration-200 border border-slate-100 dark:border-white/5 shadow-sm group cursor-pointer">
+<div class="flex gap-4">
+<div class="flex flex-1 flex-col justify-between py-1">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] font-bold text-primary uppercase tracking-wide">Regulation</span>
+</div>
+<h3 class="text-[15px] font-bold leading-tight line-clamp-2 dark:text-white text-slate-900 group-hover:text-primary transition-colors">
+                                            Tech Giants Face New Regulations in EU Markets
+                                        </h3>
+<p class="text-[13px] text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                                            New antitrust laws proposed today could reshape how major companies operate across borders.
+                                        </p>
+</div>
+<div class="flex items-center gap-2 mt-3">
+<span class="text-xs text-slate-400 font-medium">2h ago</span>
+<span class="text-xs text-slate-300 dark:text-slate-600">•</span>
+<div class="flex items-center gap-1 bg-primary/10 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-primary text-[12px]">schedule</span>
+<span class="text-[10px] font-bold text-primary">3 min</span>
+</div>
+</div>
+</div>
+<div class="shrink-0 self-start pt-1">
+<div class="relative w-[85px] h-[85px] rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800">
+<img class="w-full h-full object-cover opacity-90 transition-opacity group-hover:opacity-100" data-alt="Skyscrapers looking up from ground view representing corporate business" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMxrRzennQqxy7atoEQ3OL_iKhI6soft4CtFbHgz54JoCbKNWX7TVk83RCn9Bg1GhHd2iMnQSXqFS0cQzf3p1I5Jzu0DSGRykvOfQwrh2XCUKZJZdurEjS3RP5tQDokHkpJk34aGRe5avh6GMXjKMrsRfuLnclnbYCa6LpkAMtw5eG0rtZOFDCPP7oQfj5kaCGJ1xWPSVrteRl9tI-o6p4QqEj8wnu6HYAbETDp4HfZrc04JEcKt8CZYv8GWR22BDzcwELJ_G75vc"/>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-white dark:bg-[#1A222C] p-3 rounded-2xl active:scale-[0.98] transition-transform duration-200 border border-slate-100 dark:border-white/5 shadow-sm group cursor-pointer">
+<div class="flex gap-4">
+<div class="flex flex-1 flex-col justify-between py-1">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Markets</span>
+</div>
+<h3 class="text-[15px] font-bold leading-tight line-clamp-2 dark:text-white text-slate-900 group-hover:text-primary transition-colors">
+                                            Global Market Rally Continues Strong into Q4
+                                        </h3>
+<p class="text-[13px] text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                                            Investors are optimistic as inflation numbers show signs of cooling down globally.
+                                        </p>
+</div>
+<div class="flex items-center gap-2 mt-3">
+<span class="text-xs text-slate-400 font-medium">4h ago</span>
+<span class="text-xs text-slate-300 dark:text-slate-600">•</span>
+<span class="text-xs text-slate-400 font-medium">5 min read</span>
+</div>
+</div>
+<div class="shrink-0 self-start pt-1">
+<div class="relative w-[85px] h-[85px] rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800">
+<img class="w-full h-full object-cover opacity-90 transition-opacity group-hover:opacity-100" data-alt="Stock market graph chart on a screen displaying growth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu6p9ATl9__IktVB0azXKXDM7a3tdQgFJ4dbposVtm_XPRw13RrZjOiyrIPzop68UXDu6tdt8Ri4N2bp3IgyKnkd5D_kTXof8JD4cYLjyVD3j363JY4FxckMQwVVE5LxAP74g7-hhXpV62hWbdGdbGafLTQJvM6e0j1ZPL9CrRLsNY-FIOikQbPmemN-0OEvIS_DW3oGKJCTBIZivs92JoIU2nirO8Li0pOBzS9K58LyZNwKNjEC6-IwkkCfLmaR83xMe9m-GIuNU"/>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Section: Yesterday -->
+<section>
+<div class="sticky top-[69px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-5 py-2 border-b border-slate-200 dark:border-white/5">
+<h4 class="text-slate-500 dark:text-slate-400 text-[11px] font-bold tracking-widest uppercase">
+                            Yesterday, October 23
+                        </h4>
+</div>
+<div class="px-4 mt-3 flex flex-col gap-3">
+<!-- Card 3 -->
+<article class="bg-white dark:bg-[#1A222C] p-3 rounded-2xl active:scale-[0.98] transition-transform duration-200 border border-slate-100 dark:border-white/5 shadow-sm group cursor-pointer">
+<div class="flex gap-4">
+<div class="flex flex-1 flex-col justify-between py-1">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Energy</span>
+</div>
+<h3 class="text-[15px] font-bold leading-tight line-clamp-2 dark:text-white text-slate-900 group-hover:text-primary transition-colors">
+                                            Oil Prices Stabilize After Weeks of Volatility
+                                        </h3>
+<p class="text-[13px] text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                                            OPEC+ meeting concludes with agreements to maintain current output levels.
+                                        </p>
+</div>
+<div class="flex items-center gap-2 mt-3">
+<span class="text-xs text-slate-400 font-medium">1d ago</span>
+<span class="text-xs text-slate-300 dark:text-slate-600">•</span>
+<span class="text-xs text-slate-400 font-medium">4 min read</span>
+</div>
+</div>
+<div class="shrink-0 self-start pt-1">
+<div class="relative w-[85px] h-[85px] rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800">
+<img class="w-full h-full object-cover opacity-90 transition-opacity group-hover:opacity-100" data-alt="Oil rig silhouette against a sunset sky industrial concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2ZH3tC0N9K_Qlte7GIuMoy3G033SM1zSR32-2LL7mEl3hh7aDYeGx1oFMTr4BoQsKQDYAKjxFUFytO78nKxAjXeW9jf4g3yqVyqTllgjVsnEtDJ4W_uylALxqihl9vTKgwVFlo2JAslygDPARoGWbFqlWksgD4nFAwVUa1noiJQmOBxy44HMWjUoT56cp12kmmHbn0Nk-zOT0eiIU85JNWVhCOqE82j493LWR3WDgJB_j2JNgcazt4f9IcLGm3GfxZDLcWq18OfE"/>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-white dark:bg-[#1A222C] p-3 rounded-2xl active:scale-[0.98] transition-transform duration-200 border border-slate-100 dark:border-white/5 shadow-sm group cursor-pointer opacity-70">
+<div class="flex gap-4">
+<div class="flex flex-1 flex-col justify-between py-1">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Startups</span>
+</div>
+<h3 class="text-[15px] font-bold leading-tight line-clamp-2 dark:text-white text-slate-900 group-hover:text-primary transition-colors">
+                                            AI Startups Funding Reaches All-Time High
+                                        </h3>
+<p class="text-[13px] text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                                            Venture capital pours into generative AI despite broader market caution.
+                                        </p>
+</div>
+<div class="flex items-center gap-2 mt-3">
+<span class="text-xs text-slate-400 font-medium">Read</span>
+<span class="text-xs text-slate-300 dark:text-slate-600">•</span>
+<span class="text-xs text-slate-400 font-medium">6 min read</span>
+</div>
+</div>
+<div class="shrink-0 self-start pt-1">
+<div class="relative w-[85px] h-[85px] rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800">
+<img class="w-full h-full object-cover opacity-90 transition-opacity group-hover:opacity-100" data-alt="Abstract network connections representing artificial intelligence neural network" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZf2wuhPYBmVCaWQtzHV3uqnNjinaxaIY0iE0nj2-NoJdRTbLbV_1NdriyxftNKHr_QdCKiv0qTrYnTF1yYoVh615IIwdHzViPF1lydgOd3HPdbuOH_oZPbSwrwHI_sSA4Dg57pUqLP9JD9UpCERWP_UvSwNA9Y6ZQMkWhG3zHDIGdI3eG1qZJpuO1js_zyZwXussyyrw7q3F-zWJCxByr2GcIIte1KG0sdMx8wEGmNes0fjjrRtSAVx4FdL3piqeuZiqfvFYlYnI"/>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<div class="h-6"></div> <!-- Bottom spacer -->
+</div>
+</main>
+<!-- Bottom Tab Navigation -->
+<nav class="absolute bottom-0 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-white/5 pb-6 pt-3 px-6 z-50">
+<div class="flex items-center justify-between">
+<button class="flex flex-col items-center gap-1 text-primary group w-14">
+<span class="material-symbols-outlined font-semibold group-active:scale-90 transition-transform">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 group w-14">
+<span class="material-symbols-outlined font-semibold group-active:scale-90 transition-transform">search</span>
+<span class="text-[10px] font-medium">Search</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 group w-14">
+<span class="material-symbols-outlined font-semibold group-active:scale-90 transition-transform">bookmarks</span>
+<span class="text-[10px] font-medium">Saved</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 group w-14">
+<span class="material-symbols-outlined font-semibold group-active:scale-90 transition-transform">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</button>
+</div>
+</nav>
+<!-- Bottom Home Indicator Area (Visual) -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-black/20 dark:bg-white/20 rounded-full z-50 pointer-events-none"></div>
+</div>
+</body></html>

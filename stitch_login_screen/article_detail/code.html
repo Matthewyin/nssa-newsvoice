@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Article Detail - News Voice</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "surface-dark": "#1a2632", // Slightly lighter for cards/players in dark mode
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+            spacing: {
+                'safe-bottom': 'env(safe-area-inset-bottom)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased transition-colors duration-300">
+<div class="relative min-h-screen w-full flex flex-col overflow-x-hidden pb-32">
+<!-- Sticky Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full backdrop-blur-md bg-background-light/80 dark:bg-background-dark/80 border-b border-black/5 dark:border-white/5 transition-all">
+<div class="flex items-center justify-between px-4 py-3">
+<button class="flex items-center justify-center w-10 h-10 rounded-full active:bg-black/5 dark:active:bg-white/10 transition-colors text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-[28px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center w-10 h-10 rounded-full active:bg-black/5 dark:active:bg-white/10 transition-colors text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-[24px]">text_fields</span>
+</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-full active:bg-black/5 dark:active:bg-white/10 transition-colors text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 w-full max-w-2xl mx-auto">
+<!-- Hero Image -->
+<div class="w-full px-4 pt-4 pb-6">
+<div class="relative w-full aspect-[16/9] overflow-hidden rounded-xl shadow-sm bg-gray-200 dark:bg-gray-800">
+<img alt="Global finance and trade concept with abstract blue geometric shapes" class="w-full h-full object-cover" data-alt="Global finance and trade concept with abstract blue geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCAuuiQnI-Xvsn4lvKJxNCnnniw1d4liWfucsHx5Wrfu3qEbCBOjKbFYxxJ0qcLEROtQKR_ErPWPfv4Fy2EWHEPHnx2yN5tkndQsOc85sT5HA2RueuiSzMl29sqgLtaCIf550cMKNyUjgpAYTHuzU8ysfFCFtW_wVjZu1OyVjmzXjI-C8ol_plOT1xjETMeY9bZ_cJ_1pYlehAitOH2lFI_QMwdOCNgtgjKdYEmUrAghk08TKNhzI1mWMEP22Z5lwo4fqSv9Pk36U"/>
+<!-- Gradient Overlay for better text readability if we placed text over it, kept subtle here -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+</div>
+<!-- Article Header Info -->
+<div class="px-5 flex flex-col gap-3">
+<!-- Chips/Tags -->
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary text-xs font-semibold tracking-wide uppercase">
+                        Geopolitics
+                    </span>
+<span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-surface-dark text-slate-600 dark:text-slate-300 text-xs font-semibold tracking-wide uppercase">
+                        Analysis
+                    </span>
+</div>
+<!-- Headline -->
+<h1 class="text-3xl md:text-4xl font-extrabold leading-[1.15] tracking-tight text-slate-900 dark:text-white mt-1">
+                    The Future of Global Trade Agreements in 2024
+                </h1>
+<!-- Subheadline -->
+<p class="text-lg text-slate-600 dark:text-slate-300 leading-snug font-medium">
+                    An in-depth look at how shifting alliances are rewriting the rules of international commerce.
+                </p>
+<!-- Metadata Row -->
+<div class="flex items-center gap-3 mt-2 pb-6 border-b border-black/5 dark:border-white/10">
+<div class="h-10 w-10 rounded-full bg-gray-300 dark:bg-gray-700 overflow-hidden shrink-0">
+<img alt="Portrait of author Sarah Jenkins" class="h-full w-full object-cover" data-alt="Portrait of author Sarah Jenkins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVzQADZJ-4nq47bsf04cLJbxsjG8W1S2Y5KLdXbfMof08CocrN_qHFzTlvTPPBshlLeDD5UsPizuzR5xOQiYguCcBjeBjSF4eUppeRolaHyHPm38-ICesVMkOo9Dx3fQKY3jEY2lpqk_cCvUX1AB5v4H51r9SrR8PZ9s-jFbZrpVdYQrpJspUFG-f_eV9W_IBtZCCeLvBFKUobCAQI82CpB5ENk2w9Nm5qt8h7N_4BfRkY5ppBYYEw6Rka2SzdPBk8j-PhwGu__Z8"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Sarah Jenkins</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                            TechCrunch • Oct 24, 2023 • 5 min read
+                        </p>
+</div>
+</div>
+</div>
+<!-- Article Body -->
+<article class="px-5 py-6 prose prose-lg dark:prose-invert prose-slate max-w-none">
+<p class="text-[17px] leading-[1.6] text-slate-700 dark:text-gray-300 mb-6 font-normal">
+<span class="first-letter:text-5xl first-letter:font-bold first-letter:text-slate-900 dark:first-letter:text-white first-letter:mr-1 first-letter:float-left first-letter:leading-[0.8]">A</span>s we approach the mid-point of the decade, the landscape of international trade is undergoing a seismic shift. The established norms of the post-WWII era are being challenged by new economic powerhouses and a return to protectionist policies in key markets.
+                </p>
+<p class="text-[17px] leading-[1.6] text-slate-700 dark:text-gray-300 mb-8 font-normal">
+                    This fragmentation is not merely economic; it is deeply rooted in the geopolitical realignments we've witnessed over the last 18 months. Nations are prioritizing supply chain resilience over pure efficiency, leading to a surge in "friend-shoring" initiatives.
+                </p>
+<!-- Pull Quote -->
+<div class="my-8 pl-4 border-l-4 border-primary">
+<p class="text-xl italic font-semibold text-slate-800 dark:text-white leading-relaxed">
+                        "We are moving from an era of just-in-time efficiency to one of just-in-case resilience, and the cost will be measured not just in dollars, but in diplomatic leverage."
+                    </p>
+</div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4 mt-8">The Rise of Digital Corridors</h2>
+<p class="text-[17px] leading-[1.6] text-slate-700 dark:text-gray-300 mb-6 font-normal">
+                    Perhaps the most significant development is the digitization of trade documentation. The <a class="text-primary hover:text-primary/80 underline decoration-primary/30 underline-offset-2" href="#">Electronic Trade Documents Act</a> has paved the way for paperless commerce, potentially unlocking billions in efficiency gains. However, this also introduces new cybersecurity vulnerabilities that state actors are eager to exploit.
+                </p>
+<!-- Inline Image -->
+<div class="my-8 rounded-xl overflow-hidden bg-gray-100 dark:bg-surface-dark">
+<img alt="Digital map visualization of global shipping routes" class="w-full h-auto object-cover" data-alt="Digital map visualization of global shipping routes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ1bvo04JiwE_vI1KZwy2oKvhcHmkSkVCT0TKAvXWW8kMxLCzO6jFsPez0gqCyOszk6vLMELlaoy2FD0Lpxmz08PCLLrQYizJwG1bbnXucR7C11fkejVJxPmUl4REZStkHHtYS68WcnF7-hsLiPznCw1Vzq_j-GiHF0KakQa_VxHZ3J1cf8p1U5EyDuskKIgs5CmQnH6ea5OEHkijqx2f_Ym4OMjdh5sr1_b5H1wet62HaqxDyeWr2GPi0kn-i0aHSbXQHon4FsP0"/>
+<p class="px-4 py-2 text-xs text-slate-500 dark:text-slate-400 bg-gray-50 dark:bg-black/20">
+                        Figure 1: Projected shifts in maritime shipping volume by 2025.
+                    </p>
+</div>
+<p class="text-[17px] leading-[1.6] text-slate-700 dark:text-gray-300 mb-6 font-normal">
+                    Looking ahead, the integration of AI in customs clearance and risk assessment will likely become the standard. While this promises faster transit times, it raises ethical questions regarding algorithmic bias in trade enforcement. The nations that can master these technologies while maintaining transparent governance will likely dictate the terms of the next generation of trade agreements.
+                </p>
+<div class="h-10"></div>
+</article>
+</main>
+<!-- Floating Audio Player (Sticky Bottom) -->
+<div class="fixed bottom-0 left-0 right-0 p-4 z-40 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark pb-safe-bottom">
+<div class="relative w-full max-w-[480px] mx-auto">
+<!-- Player Container -->
+<div class="relative flex flex-col p-4 rounded-2xl bg-white dark:bg-[#1a2632] shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.4)] border border-slate-100 dark:border-white/5 backdrop-blur-xl">
+<!-- Progress Bar (Absolute Top) -->
+<div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl overflow-hidden bg-gray-100 dark:bg-gray-700">
+<div class="h-full w-[35%] bg-primary rounded-r-full"></div>
+</div>
+<div class="flex items-center justify-between gap-4 mt-1">
+<!-- Play/Pause Button -->
+<button class="flex items-center justify-center h-12 w-12 rounded-full bg-primary text-white shadow-lg shadow-primary/30 shrink-0 hover:bg-primary/90 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[28px] fill-1">play_arrow</span>
+</button>
+<!-- Track Info -->
+<div class="flex flex-col flex-1 min-w-0">
+<h3 class="text-sm font-bold text-slate-900 dark:text-white truncate">Listen to Article</h3>
+<div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
+<span class="truncate">Narrated by AI Voice</span>
+<span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+<span>2:14 left</span>
+</div>
+</div>
+<!-- Speed Control -->
+<button class="flex items-center justify-center px-3 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-xs font-semibold text-slate-900 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
+                            1.0x
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

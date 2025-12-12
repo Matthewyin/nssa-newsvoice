@@ -100,22 +100,21 @@ function CategoryPage() {
       
       try {
         let snapshot;
-        // Try sorting by createdAt first
+        // Prioritize sorting by date (news time)
         let q = query(
           collection(db, category),
-          orderBy('createdAt', 'desc'),
+          orderBy('date', 'desc'),
           limit(PAGE_SIZE)
         );
 
         try {
            snapshot = await getDocs(q);
         } catch (e) {
-           console.warn('createdAt sort failed, using date', e);
-           // Fallback to default sorting (or just simple collection query if index issue)
-           // If permission denied, this will also fail, handled in outer catch
+           console.warn('date sort failed, using createdAt', e);
+           // Fallback to createdAt
            q = query(
             collection(db, category),
-            orderBy('date', 'desc'),
+            orderBy('createdAt', 'desc'),
             limit(PAGE_SIZE)
            );
            snapshot = await getDocs(q);
@@ -163,9 +162,10 @@ function CategoryPage() {
     setLoadingMore(true);
     try {
       let snapshot;
+      // Prioritize sorting by date (news time)
       const q = query(
         collection(db, category),
-        orderBy('createdAt', 'desc'),
+        orderBy('date', 'desc'),
         startAfter(lastVisible),
         limit(PAGE_SIZE)
       );
@@ -173,13 +173,14 @@ function CategoryPage() {
       try {
         snapshot = await getDocs(q);
       } catch (e) {
-         const qDate = query(
+         console.warn('date sort failed for loadMore, using createdAt', e);
+         const qCreated = query(
            collection(db, category),
-           orderBy('date', 'desc'),
+           orderBy('createdAt', 'desc'),
            startAfter(lastVisible),
            limit(PAGE_SIZE)
          );
-         snapshot = await getDocs(qDate);
+         snapshot = await getDocs(qCreated);
       }
 
       if (!snapshot.empty) {

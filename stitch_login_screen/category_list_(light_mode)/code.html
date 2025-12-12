@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>News Voice - Business Feed</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for clean UI in segments */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display antialiased overflow-x-hidden">
+<div class="relative flex flex-col min-h-screen w-full max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl overflow-hidden pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-20 flex items-center justify-between px-4 py-3 bg-white/90 dark:bg-[#101922]/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+<button class="flex items-center justify-center w-10 h-10 -ml-2 rounded-full active:bg-gray-100 dark:active:bg-gray-800 text-[#111418] dark:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-8">Business Feed</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full active:bg-gray-100 dark:active:bg-gray-800 text-primary transition-colors absolute right-2">
+<span class="material-symbols-outlined" style="font-size: 24px;">tune</span>
+</button>
+</header>
+<!-- Segmented Control -->
+<div class="sticky top-[60px] z-10 bg-white dark:bg-background-dark px-4 py-3 pb-4">
+<div class="flex h-10 w-full items-center justify-center rounded-lg bg-[#f0f2f4] dark:bg-gray-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-gray-500 dark:text-gray-400 text-sm font-semibold leading-normal">
+<span class="truncate">Latest</span>
+<input checked="" class="invisible w-0 h-0 absolute" name="feed-filter" type="radio" value="Latest"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-gray-500 dark:text-gray-400 text-sm font-semibold leading-normal">
+<span class="truncate">Trending</span>
+<input class="invisible w-0 h-0 absolute" name="feed-filter" type="radio" value="Trending"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-gray-500 dark:text-gray-400 text-sm font-semibold leading-normal">
+<span class="truncate">Analysis</span>
+<input class="invisible w-0 h-0 absolute" name="feed-filter" type="radio" value="Analysis"/>
+</label>
+</div>
+</div>
+<!-- Scrollable Feed Content -->
+<main class="flex flex-col gap-6 px-4">
+<!-- Featured Card (Full Image) -->
+<article class="relative group cursor-pointer">
+<div class="relative w-full h-[360px] rounded-2xl overflow-hidden shadow-md transition-transform duration-300 active:scale-[0.98]">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Abstract rising stock market graph with blue and purple gradients" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxATCNsiE2qmc-l5BrViEBCvTV6FjiqcCfmRX6CCD8abLdxRBWvzHT03SKDdsAvj-sIm4OQ3WYObciew6YQzwAWaiq3v12k9W8Ml9RhMxvcHCFu8rsVs-i1MSQkmkTAnZwlkHxgGU03dMpyQ294KCoQxFzg7-fCKAaW6u0Df5GsTudF53m92LFFDkxb26Qk7EGkwZkiHrpxb_QerA0cM6Hqc3mgCtNTYx2o7kRvJFbCeefKMZlk5ztIclVbNgNGbhQyN_P71JeTQM");'>
+</div>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<!-- Content -->
+<div class="absolute bottom-0 left-0 w-full p-5 flex flex-col gap-2">
+<div class="flex items-center justify-between text-white/90">
+<span class="text-xs font-bold tracking-wider uppercase bg-primary/90 px-2 py-0.5 rounded">Top Story</span>
+<span class="text-xs font-medium">Oct 24</span>
+</div>
+<h2 class="text-white text-2xl font-bold leading-tight tracking-tight mt-1">
+                            Market Rally Continues as Tech Stocks Surge to New Heights
+                        </h2>
+<p class="text-gray-200 text-sm font-medium leading-relaxed line-clamp-2">
+                            Major indices hit record highs following positive earnings reports from leading tech giants and semiconductor manufacturers.
+                        </p>
+<div class="flex items-center gap-3 mt-2 text-white/80">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="text-xs font-medium">4 min read</span>
+</div>
+<div class="flex-1"></div>
+<button class="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Section Title -->
+<div class="flex items-center justify-between pt-2">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Recent Updates</h3>
+<button class="text-sm font-semibold text-primary">View All</button>
+</div>
+<!-- List Item Card 1 -->
+<article class="flex bg-white dark:bg-gray-800/50 rounded-xl p-3 gap-4 shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-800 cursor-pointer active:bg-gray-50 dark:active:bg-gray-800 transition-colors">
+<div class="flex flex-col flex-1 gap-1.5 min-w-0"> <!-- min-w-0 required for truncate/line-clamp in flex item -->
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-bold text-gray-500 uppercase tracking-wide">Yesterday</span>
+</div>
+<h3 class="text-[17px] font-bold text-[#111418] dark:text-gray-100 leading-snug line-clamp-2">
+                        The Future of Remote Work Legislation
+                    </h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 leading-normal line-clamp-2">
+                        New bills proposed in the senate could change how companies handle tax for remote employees working across state lines.
+                    </p>
+<div class="flex items-center gap-3 mt-auto pt-2">
+<span class="text-xs font-semibold text-primary">6 min read</span>
+</div>
+</div>
+<div class="relative w-28 h-28 shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+<div class="w-full h-full bg-cover bg-center" data-alt="Modern office desk with laptop and coffee showing remote work concept" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDoBlUc-4qpbNhPohufUCGsECcjy_01OiWB7nwIsWN0xizC92ebaZGq7vi9LaC4krCXsHpIy13JSfqrx8QvyWmNW7aeNzWbk0KW3ySg8AV5K_hYZqS4KLgSwmxeSxr_BC2T6pVx-r-QO8muynl4YqQVgwX7Kz5teigbe73Z9eeYmEkEGQPCdLdnWgLQcopcc-4d3f8hacJi279KuGFASW-qf1M5japlf2LgBP_sIRflDkCnNtpMcGMBHfiRwdS0GdMJ1jOIdJfZNms");'>
+</div>
+</div>
+</article>
+<!-- List Item Card 2 -->
+<article class="flex bg-white dark:bg-gray-800/50 rounded-xl p-3 gap-4 shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-800 cursor-pointer active:bg-gray-50 dark:active:bg-gray-800 transition-colors">
+<div class="flex flex-col flex-1 gap-1.5 min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-bold text-gray-500 uppercase tracking-wide">Oct 22</span>
+</div>
+<h3 class="text-[17px] font-bold text-[#111418] dark:text-gray-100 leading-snug line-clamp-2">
+                        Global Supply Chain Bottlenecks Ease
+                    </h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 leading-normal line-clamp-2">
+                        Shipping containers moving smoothly through a port, signaling recovery in logistics and reduced shipping costs globally.
+                    </p>
+<div class="flex items-center gap-3 mt-auto pt-2">
+<span class="text-xs font-semibold text-primary">3 min read</span>
+</div>
+</div>
+<div class="relative w-28 h-28 shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+<div class="w-full h-full bg-cover bg-center" data-alt="Aerial view of shipping containers at a busy port" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVQsDOghZujo44iyp_xtN09Qdq4W6KZ3Zbk1e_6_lxbgh_YICNhusz5ojxluLAd5e2po61KLUMUuqd13mmgBFo5UxmE8bjwSo3xFedViG_Gy0Cf3KxCNoTK7_f28VsrqZgdZMEadTjSaPlhrcpFukAxhD9G1aUTpRVQfw-nV2rSkLl7_tm-Vi0Z_rXgm9jpHu_y7e3d6w02sOix5FaQG6n2kNRtpECizqQlLOumj16Ai5LU6E3jAtDWRT7LF5HEIWyfTsfhSYsl4U");'>
+</div>
+</div>
+</article>
+<!-- List Item Card 3 -->
+<article class="flex bg-white dark:bg-gray-800/50 rounded-xl p-3 gap-4 shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-gray-100 dark:border-gray-800 cursor-pointer active:bg-gray-50 dark:active:bg-gray-800 transition-colors">
+<div class="flex flex-col flex-1 gap-1.5 min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-bold text-gray-500 uppercase tracking-wide">Oct 21</span>
+</div>
+<h3 class="text-[17px] font-bold text-[#111418] dark:text-gray-100 leading-snug line-clamp-2">
+                        Cryptocurrency Regulations Tighten in EU
+                    </h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 leading-normal line-clamp-2">
+                        European lawmakers agree on landmark legislation to regulate crypto assets and service providers.
+                    </p>
+<div class="flex items-center gap-3 mt-auto pt-2">
+<span class="text-xs font-semibold text-primary">5 min read</span>
+</div>
+</div>
+<div class="relative w-28 h-28 shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+<div class="w-full h-full bg-cover bg-center" data-alt="Digital representation of blockchain technology with euro symbols" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhqdkhVec092Z5m3dkL7svqAC-AM1rfZR3PD35uMtfMHeFZ16jDiujkfzlhQrUc7oepNwq2Ka6GdYNb8hi84-aG5RdqUT7L0fDMrG2ZOkwKiS18nl2Q-Yz5sxQ_Y6sSbPTcrh6m4zYw9Kpz1Gxl69kyURgVUTpUU1zDL2yHFA6msjG0WFtZygqjciBhWeKtWAAaBHnFMeuYogrR7_91jW8f0gmKMffN5hcq-J5qHMhDeqAq0CeaCLp3sPZ_l_aQnWXncTjr-yjtiE");'>
+</div>
+</div>
+</article>
+<!-- End of list spacing -->
+<div class="h-4"></div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/90 dark:bg-[#101922]/95 backdrop-blur-lg border-t border-gray-200 dark:border-gray-800 max-w-md mx-auto">
+<div class="flex items-center justify-around h-[88px] pb-6 px-2">
+<a class="flex flex-col items-center justify-center gap-1 w-full text-primary" href="#">
+<span class="material-symbols-outlined font-variation-settings-fill" style="font-variation-settings: 'FILL' 1;">newspaper</span>
+<span class="text-[10px] font-medium">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-full text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-medium">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-full text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="text-[10px] font-medium">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-full text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>
